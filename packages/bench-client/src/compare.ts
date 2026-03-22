@@ -328,23 +328,23 @@ async function main() {
     };
 
     try {
-      // 2. Run Benchmarks
+      // 2. Run Benchmarks (sequential — parallel distorts results on single-threaded servers)
 
-      // Phase 1: Connections + Latency in parallel (low interference — conn only opens sockets, latency is light)
-      console.log("  - Benchmarking Connections + Latency (parallel)...");
-      const [conn, lat] = await Promise.all([
-        runBenchScript("connections.ts", { CONNECTIONS: TARGET_CONNECTIONS }),
-        runBenchScript("latency.ts", {
-          CLIENTS: "20",
-          SAMPLES: TARGET_SAMPLES,
-        }),
-      ]);
-      console.log(`    Connections: ${conn ? `${conn.rate}/sec` : "Failed"}`);
-      console.log(`    Latency: ${lat ? `p95: ${lat.p95Ms}ms` : "Failed"}`);
+      process.stdout.write("  - Benchmarking Connections... ");
+      const conn = await runBenchScript("connections.ts", {
+        CONNECTIONS: TARGET_CONNECTIONS,
+      });
+      console.log(conn ? `${conn.rate}/sec` : "Failed");
       if (conn) results[scenario.name].connections = conn;
+
+      process.stdout.write("  - Benchmarking Latency... ");
+      const lat = await runBenchScript("latency.ts", {
+        CLIENTS: "20",
+        SAMPLES: TARGET_SAMPLES,
+      });
+      console.log(lat ? `p95: ${lat.p95Ms}ms` : "Failed");
       if (lat) results[scenario.name].latency = lat;
 
-      // Phase 2: Throughput alone (heavy load — floods the server)
       process.stdout.write("  - Benchmarking Throughput... ");
       const tp = await runBenchScript("throughput.ts", {
         CLIENTS: TARGET_CLIENTS,
