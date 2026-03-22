@@ -1,0 +1,21 @@
+{
+  "version": "1.0.7",
+  "date": "2026-03-22",
+  "ratios": {
+    "throughput": 1.0533345973361141,
+    "connections": 1.0112994350282485,
+    "latencyP95": 0.5597014925373134
+  },
+  "absolute": {
+    "bun-native": {
+      "throughput": 222222,
+      "connections": 895,
+      "latencyP95": 1.5
+    },
+    "bun-socketio-engine": {
+      "throughput": 210970,
+      "connections": 885,
+      "latencyP95": 2.68
+    }
+  }
+}
