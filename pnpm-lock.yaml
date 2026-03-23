@@ -31,8 +31,8 @@ importers:
   packages/server-bun-native:
     dependencies:
       '@rvncom/socket-bun-engine':
-        specifier: ^1.0.8
-        version: 1.0.8(typescript@5.9.3)
+        specifier: ^1.0.9
+        version: 1.0.9(typescript@5.9.3)
       socket.io:
         specifier: ^4.8.3
         version: 4.8.3
@@ -190,8 +190,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@rvncom/socket-bun-engine@1.0.8':
-    resolution: {integrity: sha512-znhC2FcdQKXJJ1qadi23WmH8uXGa7s4i8i3n1c2LEuKIhRDfnW1cVXx18Nz2izD1mOBoK+PnLgKXgM5WoW+MuA==}
+  '@rvncom/socket-bun-engine@1.0.9':
+    resolution: {integrity: sha512-8tMkuI5m0TjcGyc3IL5ncdQOXuu4g7pF1AS8vUrb+vbjd2llrRXKycZKq8A1iG7Pw10cqCg0SCclrlQT+Otkfg==}
     engines: {bun: '>=1.0.0'}
     peerDependencies:
       typescript: ^5.9.2
@@ -395,7 +395,7 @@ snapshots:
   '@oxlint/binding-win32-x64-msvc@1.56.0':
     optional: true
 
-  '@rvncom/socket-bun-engine@1.0.8(typescript@5.9.3)':
+  '@rvncom/socket-bun-engine@1.0.9(typescript@5.9.3)':
     dependencies:
       typescript: 5.9.3
 
