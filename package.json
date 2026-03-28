@@ -1,5 +1,5 @@
 {
-  "name": "socket-bun-engine-bench-monorepo",
+  "name": "socketio-bun-engine-bench",
   "private": true,
   "scripts": {
     "bench": "pnpm --filter @bench/client run start",
@@ -11,8 +11,8 @@
   },
   "devDependencies": {
     "@types/node": "^25.5.0",
-    "oxlint": "^1.56.0",
+    "oxlint": "^1.57.0",
     "prettier": "^3.8.1"
   },
-  "packageManager": "pnpm@10.32.1"
+  "packageManager": "pnpm@10.33.0"
 }

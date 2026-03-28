@@ -18,7 +18,7 @@ const SCENARIOS = [
   },
   {
     name: "bun-native",
-    label: "Bun (@rvncom/socket-bun-engine)",
+    label: "Bun (@rvncom/socketio-bun-engine)",
     color: "rgba(75, 192, 192, 0.7)",
   },
 ];

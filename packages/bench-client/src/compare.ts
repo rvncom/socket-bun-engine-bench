@@ -74,7 +74,7 @@ const SCENARIOS: ScenarioMeta[] = [
   },
   {
     name: "bun-native",
-    label: "Bun (@rvncom/socket-bun-engine)",
+    label: "Bun (@rvncom/socketio-bun-engine)",
     cmd: [BUN_PATH, path.join(PACKAGES_DIR, "server-bun-native", "index.ts")],
     cwd: path.join(PACKAGES_DIR, "server-bun-native"),
     color: "rgba(75, 192, 192, 0.7)", // Green

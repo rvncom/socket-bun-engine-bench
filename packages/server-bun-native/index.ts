@@ -1,4 +1,4 @@
-import { Server as Engine } from "@rvncom/socket-bun-engine";
+import { Server as Engine } from "@rvncom/socketio-bun-engine";
 import { Server } from "socket.io";
 
 const PORT = Number(process.env.PORT) || 3000;

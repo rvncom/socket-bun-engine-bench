@@ -16,7 +16,7 @@ export function generateHtmlReport(
     return label
       .replace("Node.js ", "")
       .replace("Bun ", "")
-      .replace("(@rvncom/socket-bun-engine)", "rvn-native")
+      .replace("(@rvncom/socketio-bun-engine)", "rvn-native")
       .replace("(@socket.io/bun-engine)", "bun-engine")
       .replace("(ws)", "ws")
       .trim();
@@ -137,7 +137,7 @@ export function generateHtmlReport(
                             ? BUN_SVG
                             : "";
                         let isRvn = displayLabel.includes(
-                          "@rvncom/socket-bun-engine",
+                          "@rvncom/socketio-bun-engine",
                         );
                         let labelStyle = isRvn
                           ? `style="color: ${r.meta.color};"`

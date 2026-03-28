@@ -1,6 +1,6 @@
 # Socket.IO Benchmark Monorepo
 
-[![GitHub Pages](https://img.shields.io/badge/reports-GitHub%20Pages-blue?logo=github)](https://rvncom.github.io/socket-bun-engine-bench/)
+[![GitHub Pages](https://img.shields.io/badge/reports-GitHub%20Pages-blue?logo=github)](https://rvncom.github.io/socketio-bun-engine-bench/)
 [![Node.js](https://img.shields.io/badge/Node.js-22+-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![Bun](https://img.shields.io/badge/Bun-1.0+-f472b6?logo=bun&logoColor=white)](https://bun.sh/)
 [![pnpm](https://img.shields.io/badge/pnpm-10+-F69220?logo=pnpm&logoColor=white)](https://pnpm.io/)
@@ -11,7 +11,7 @@ Benchmarks for comparing Socket.IO server implementations across Node.js and Bun
 - **Node.js (ws)**: Standard `socket.io` on Node.js with default `ws` transport.
 - **Node.js (uWebSockets.js)**: `uWebSockets.js` server emulating Socket.IO protocol (lightweight).
 - **Bun (@socket.io/bun-engine)**: Standard `socket.io` running on Bun with official `@socket.io/bun-engine`.
-- **Bun (@rvncom/socket-bun-engine)**: `@rvncom/socket-bun-engine` running on Bun (native Bun.serve).
+- **Bun (@rvncom/socketio-bun-engine)**: `@rvncom/socketio-bun-engine` running on Bun (native Bun.serve).
 
 ## Structure
 
@@ -21,7 +21,7 @@ This is a pnpm monorepo:
 - `packages/server-node-ws`: Node.js + `ws` (default Socket.IO transport).
 - `packages/server-node-uws`: Node.js + uWebSockets.js server.
 - `packages/server-bun-socketio-engine`: Bun + `@socket.io/bun-engine` server.
-- `packages/server-bun-native`: Bun + `@rvncom/socket-bun-engine` server.
+- `packages/server-bun-native`: Bun + `@rvncom/socketio-bun-engine` server.
 
 ## Prerequisites
 
